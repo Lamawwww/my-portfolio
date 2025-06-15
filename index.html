@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="./font/MonaSans-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="./font/MonaSans-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="./font/MonaSans-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./font/MonaSansExpanded-Regular.ttf" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="./font/MonaSansExpanded-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="./font/MonaSansExpanded-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/gradient-bg.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/style.css">
+      <title> My Portfolio | Handumon </title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-section">
+                <li><a href="#">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-wrapper">
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <div class="left-content">
+                    <div class="title-container">
+                        <h3 class="greeting">I'm</h3>
+                        <h1 id="Spinning-Text">Adriane</h1>
+                    </div>
+
+                    <div class="about-me">
+                        <p>" I’m Adriane Handumon, a dedicated IT student specializing in mobile and web development. I’ve built several projects that sharpened my skills in creating responsive and user-focused applications. Currently, I’m focusing on learning CSS and JavaScript frameworks to bring more life and functionality to the websites and apps I create. My goal is to build meaningful digital experiences that solve everyday problems and make technology more accessible. I’m always open to learning and collaborating — so if you’re interested in building something great together, feel free to <a   
+                                href="#contact" class="text-link">connect with me</a>."</p>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="#about" class="cta-btn primary-btn">Learn More</a>
+                        <a href="#projects" class="cta-btn secondary-btn">See My Projects</a>
+                    </div>
+                </div>
+
+                <div class="right-content">
+                    <div class="profile-container">
+                        <div class="profile-frame">
+                            <img id="profile-pic" src="./public/img/profile-pic.jpg" draggable="false"
+                                data-nosnippet>
+                        </div>
+
+                        <div class="social-media">
+    <ul class="social-icons">
+        <li><a href="https://www.linkedin.com/in/adriane-handumon-4a5095345/" aria-label="LinkedIn"><img
+                    src="./public/links/linkedin.webp" id="linkedin"
+                    draggable="false"></a></li>
+        <li><a href="https://github.com/Lamawwww" aria-label="GitHub"><img
+                    src="./public/links/github.webp" id="github"
+                    draggable="false"></a></li>
+        <li><a href="https://www.facebook.com/adrnhndmn" aria-label="YouTube"><img
+                    src="./public/links/facebook.webp" id="youtube"
+                    draggable="false"></a></li>
+        <li><a href="https://www.instagram.com/adrnhndmn/" aria-label="Instagram"><img
+                    src="./public/links/instagram.webp" id="instagram"
+                    draggable="false"></a></li>
+        <li><a href="https://open.spotify.com/user/ftag0alxq0vdmes4kpguzl0iy"
+                aria-label="Spotify"><img src="./public/links/spotify.webp" id="spotify"
+                    draggable="false"></a></li>
+    </ul>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="projects" class="projects-section">
+    <div class="section-header">
+        <h2>My Projects</h2>
+        <p>Here are some of my game and app development projects</p>
+    </div>
+
+    <div class="projects-container">
+        <div class="project-card">
+            <img src="./public/projects/project1.png" draggable="false" data-nosnippet>
+            <div class="project-info-overlay">
+                <h3>OneShot App</h3>
+                <div class="tag-container">
+                    <span>Android Studio</span>
+                    <span>Firebase</span>
+                    <span>Java</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-btn">Details</a>
+                    <a href="https://github.com/Lamawwww/OneShot_app" class="project-btn">Github</a>
+                </div>
+            </div>
+            <div class="project-description">
+                <button class="close-description"><span>&times;</span></button>
+                <p>OneShot is an Android app built with Android Studio using Java and Firebase. It features a collection of 40+ different one-shot mangas. The app allows users to browse and read short manga stories anytime, with Firebase handling the storage and management of manga data.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="./public/projects/project2.png" draggable="false" data-nosnippet>
+            <div class="project-info-overlay">
+                <h3>SkyWings Airline Reservation System</h3>
+                <div class="tag-container">
+                    <span>MongoDB</span>
+                    <span>Express.js</span>
+                    <span>EJS</span>
+                    <span>Node.js</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-btn">Details</a>
+                    <a href="https://github.com/Lamawwww/SkyWings" class="project-btn">Github</a>
+                </div>
+            </div>
+            <div class="project-description">   
+                <button class="close-description"><span>&times;</span></button>
+                <p>SkyWings is a web-based airline reservation system with features like ticket booking, passenger handling, booking history, and flight management. Built with Node.js, Express, EJS, and MongoDB.</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="./public/projects/project3.webp" draggable="false" data-nosnippet>
+            <div class="project-info-overlay">
+                <h3>Portfolio Website</h3>
+                <div class="tag-container">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-btn">Details</a>
+                    <a href="https://github.com/enesehs/Automated-Whatsapp-Message" class="project-btn">Github</a>
+                </div>
+            </div>
+            <div class="project-description">
+                <button class="close-description"><span>&times;</span></button>
+                <p>A responsive and modern personal portfolio showcasing projects, skills, and contact information. Designed with accessibility and user experience in mind, optimized for both desktop and mobile views.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="view-more">
+        <a href="https://github.com/Lamawwww?tab=repositories" class="cta-btn">View All Projects</a>
+    </div>
+</section>
+
+    <section id="skills" class="skills-section">
+        <div class="section-header">
+            <h2>My Skills</h2>
+            <p>Technologies and languages I work with.</p>
+        </div>
+
+        <div class="skills-container">
+            <!-- auto generated by content.js -->
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p>Getting to know Adriane.</p>
+        </div>
+
+        <div class="about-container">
+            <div class="about-content-wrapper">
+                <div class="about-text">
+                    <p>I'm Adriane, a 21-year-old pursuing a Bachelor of Science in Information Technology with a specialization in mobile and web development. I enjoy learning new technologies, building responsive interfaces, and exploring ways to improve user experience. As I continue my journey in IT, I'm focused on developing my skills in front-end and back-end development, with a goal of becoming a well-rounded developer who can build full-stack applications. Aside from coding, I also have a hobby of building PCs. I enjoy customizing and optimizing hardware setups to get the best performance. This is my current setup right now:</p>
+
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <h4>Specialization</h4>
+                            <p>Focusing on Mobile App and Web Development</p>
+                        </div>
+                    </div>
+
+                    <div class="about-cta">
+                        <a href="#contact" class="cta-btn">Contact Me</a>
+                        <!-- <a href="/public/assets/cv/resume.pdf" class="cta-btn">Download CV</a> -->
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-container">
+                        <img src="./public/img/desktop-pc.png" loading="lazy" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Contact Me</h2>
+            <p>Let's work together on your next project</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>Email</h4>
+                        <p><a href="mailto:handumona@students.nu-moa.edu.ph">handumona@students.nu-moa.edu.ph</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>Location</h4>
+                        <p>Pasay, Philippines</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>Socials</h4>
+                        <div class="mini-social">
+                            <a href="https://www.instagram.com/adrnhndmn/" target="_blank"
+                                rel="noopener">Instagram</a>
+                            <a href="https://www.linkedin.com/in/adriane-handumon-4a5095345/" target="_blank" rel="noopener">LinkedIn</a>
+                            <a href="https://github.com/Lamawwww" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="entry.1977863006" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="entry.1990805682" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="entry.2105838083" placeholder="Your message" style="height: 100px;"
+                            required></textarea>
+                    </div>
+                    <div class="h-captcha" data-sitekey="47607e84-9ffa-481a-9894-d1eec7d2da04" data-theme="dark"></div>
+                    <input type="submit" value="Submit Form" class="form-submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon-footer">
+            <li><a href="https://www.linkedin.com/in/adriane-handumon-4a5095345/"><img src="./public/links/linkedin.webp"
+                        id="linkedin" draggable="false" loading="lazy"></a></li>
+            <li><a href="https://github.com/Lamawwww"><img src="./public/links/github.webp"
+                        id="github" draggable="false" loading="lazy"></a></li>
+            <li><a href="https://www.facebook.com/adrnhndmn"><img src="./public/links/facebook.webp"
+                        id="facebook" draggable="false" loading="lazy"></a></li>
+            <li><a href="https://www.instagram.com/adrnhndmn/"><img src="./public/links/instagram.webp"
+                        id="instagram" draggable="false" loading="lazy"></a></li>
+            <li><a href="https://open.spotify.com/user/ftag0alxq0vdmes4kpguzl0iy"><img
+                        src="./public/links/spotify.webp" id="spotify"
+                        draggable="false" loading="lazy"></a></li>
+        </ul>
+        <ul class="footer-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p>&copy; 2025 Adriane Handumon. All Rights Reserved.</p>
+    </footer>
+    <div class="gradient-bg">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="noiseBg">
+            <filter id="noiseFilterBg">
+                <feTurbulence type="fractalNoise" baseFrequency="0.6" stitchTiles="stitch" />
+            </filter>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="svgBlur">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                        result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="g6"></div>
+            <div class="interactive"></div>
+        </div>
+        <script src="./js/script.js"></script>
+        <script src="./js/gradient.js"></script>
+        <script src="./js/content.js"></script>
+</body>
+</html>

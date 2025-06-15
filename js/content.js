@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { 'name': 'SQL', 'level': 3, 'description': 'A powerful database language used to store, retrieve, and manage structured data efficiently.' },
         { 'name': 'MongoDB', 'level': 4, 'description': 'A flexible, document-oriented database designed for scalable, high-performance applications that handle large volumes of unstructured data.' },
         { 'name': 'Git', 'level': 5, 'description': 'A distributed version control system that helps track changes in code, collaborate efficiently, and manage project history.' },
-        { 'name': 'Github', 'level': 5, 'description': 'A platform for code hosting and collaboration that simplifies version control and enables seamless teamwork on software projects.' }
+        { 'name': 'GitHub', 'level': 5, 'description': 'A platform for code hosting and collaboration that simplifies version control and enables seamless teamwork on software projects.' }
     ],
         skillsContainer = document.querySelector('.skills-container');
     skills.forEach(skill => {

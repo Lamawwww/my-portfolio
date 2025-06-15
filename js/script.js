@@ -34,23 +34,35 @@ document.addEventListener("DOMContentLoaded", (function() {
         header.classList.toggle("sticky", window.scrollY > 100);
     }));
 
+    // Hamburger menu functionality with error checking
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-section");
     const body = document.body;
 
-    hamburger.addEventListener("click", (function() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-        body.classList.toggle("no-scroll");
-    }));
+    // Debug: Check if elements exist
+    console.log("Hamburger element found:", hamburger !== null);
+    console.log("Nav menu element found:", navMenu !== null);
 
-    document.querySelectorAll(".nav-section a").forEach(link => {
-        link.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-            body.classList.remove("no-scroll");
+    // Only add event listener if hamburger element exists
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", function() {
+            console.log("Hamburger clicked!"); // Debug log
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+            body.classList.toggle("no-scroll");
         });
-    });
+
+        // Close menu when clicking nav links
+        document.querySelectorAll(".nav-section a").forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+                body.classList.remove("no-scroll");
+            });
+        });
+    } else {
+        console.error("Hamburger or nav menu element not found!");
+    }
 
     const navLinks = document.querySelectorAll(".nav-section li a");
 
@@ -64,9 +76,11 @@ document.addEventListener("DOMContentLoaded", (function() {
 
     navLinks.forEach(link => {
         link.addEventListener("click", (function() {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-            body.classList.remove("no-scroll");
+            if (hamburger && navMenu) {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+                body.classList.remove("no-scroll");
+            }
         }));
     });
 
@@ -108,5 +122,20 @@ document.addEventListener("DOMContentLoaded", (function() {
 
         setInterval(animate, 3000);
     }
-}));
 
+    // Force hamburger visibility on mobile (emergency fix)
+    function ensureHamburgerVisibility() {
+        if (window.innerWidth <= 992 && hamburger) {
+            hamburger.style.display = "flex";
+            hamburger.style.flexDirection = "column";
+            hamburger.style.gap = "5px";
+            hamburger.style.cursor = "pointer";
+            hamburger.style.zIndex = "1001";
+            console.log("Hamburger forced to show on mobile");
+        }
+    }
+
+    // Check visibility on load and resize
+    ensureHamburgerVisibility();
+    window.addEventListener("resize", ensureHamburgerVisibility);
+}));

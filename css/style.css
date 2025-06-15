@@ -226,7 +226,6 @@ body.no-scroll {
     font-weight: 700;
     color: var(--white);
     margin-bottom: 10px;
-    white-space: nowrap;
 }
 
 .about-me {
@@ -430,7 +429,7 @@ body.no-scroll {
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
@@ -708,7 +707,7 @@ body.no-scroll {
 
 .about-text {
     flex: 1;
-    min-width: 700px;
+    min-width: 250px;
 }
 
 .about-text p {
@@ -806,7 +805,7 @@ body.no-scroll {
 
 .contact-info {
     flex: 1;
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .info-item {
@@ -910,7 +909,7 @@ body.no-scroll {
 
 .contact-form {
     flex: 2;
-    min-width: 400px;
+    min-width: 300px;
     background: rgba(255, 255, 255, .05);
     border-radius: 15px;
     padding: 30px;

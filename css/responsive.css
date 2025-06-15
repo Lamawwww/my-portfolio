@@ -1,22 +1,3 @@
-@media (max-width: 1400px) {
-  .hero-container {
-    padding: 0 20px;
-  }
-
-  .right-content {
-    margin-right: 0;
-  }
-
-  .about-me {
-    width: 100%;
-    padding-right: 0;
-  }
-
-  #Spinning-Text {
-    font-size: 3.8rem;
-  }
-}
-
 @media (max-width: 992px) {
   header {
     padding: 20px 30px;
@@ -27,6 +8,12 @@
     padding: 10px 20px;
   }
 
+  /* ADDED: Hide the regular navigation */
+  nav ul {
+    display: none;
+  }
+
+  /* ADDED: Show the hamburger menu */
   .hamburger {
     display: flex;
     z-index: 999;
@@ -69,13 +56,15 @@
     top: 0;
   }
 
-  nav ul {
+  /* ADDED: Show the navigation when hamburger is active */
+  .nav-section ul {
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     gap: 30px;
   }
 
-  nav ul li a {
+  .nav-section ul li a {
     font-size: 1.5rem;
     padding: 10px;
   }
@@ -100,6 +89,11 @@
   #Spinning-Text {
     font-size: 3.5rem;
     white-space: normal;
+  }
+
+  .about-me {
+    width: 100%;
+    max-width: 100%;
   }
 
   .about-me p {
@@ -129,18 +123,30 @@
 
   .contact-container {
     flex-direction: column;
+    gap: 30px;
   }
 
   .contact-form {
     min-width: 100%;
+    max-width: 100%;
   }
 
+  .contact-info {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   header {
     padding: 15px 20px;
     width: 100%;
+    box-sizing: border-box;
   }
 
   header.sticky {
@@ -155,8 +161,34 @@
     height: 22px;
   }
 
+  /* ADDED: Ensure hamburger stays visible */
+  .hamburger {
+    display: flex;
+    z-index: 999;
+    position: relative;
+  }
+
+  /* ADDED: Keep regular nav hidden */
+  nav ul {
+    display: none;
+  }
+
+  /* ADDED: Show mobile nav when active */
+  .nav-section ul {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
   .hero {
     padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-container {
+    padding: 0 10px;
   }
 
   .section-header h2 {
@@ -176,6 +208,7 @@
 
   .projects-container {
     grid-template-columns: 1fr;
+    padding: 0 10px;
   }
 
   .project-card {
@@ -184,6 +217,8 @@
 
   #Spinning-Text {
     font-size: 3rem;
+    white-space: normal;
+    word-break: break-word;
   }
 
   .greeting {
@@ -192,10 +227,19 @@
 
   .about-me {
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .about-me p {
+    font-size: 0.95rem;
+    word-break: break-word;
   }
 
   .skills-container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 0 10px;
   }
 
   .footer-menu {
@@ -203,21 +247,42 @@
     gap: 15px;
   }
 
-  nav ul li a {
+  .nav-section ul li a {
     font-size: 1.3rem;
   }
 
   .nav-section {
     padding: 50px 20px;
   }
+
+  .about-text {
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  .contact-form {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100%;
+  }
+
   header {
     padding: 12px 15px;
     width: 100%;
     left: 0;
     right: 0;
+    box-sizing: border-box;
   }
 
   header.sticky {
@@ -228,21 +293,49 @@
     height: 28px;
   }
 
+  /* ADDED: Ensure hamburger visibility on small screens */
+  .hamburger {
+    display: flex;
+    z-index: 999;
+    position: relative;
+  }
+
+  /* ADDED: Keep regular nav hidden */
+  nav ul {
+    display: none;
+  }
+
+  /* ADDED: Show mobile nav when active */
+  .nav-section ul {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
   .hero {
     padding-top: 100px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-container {
+    padding: 0 5px;
+    width: 100%;
+    max-width: 100%;
   }
 
   header.sticky .logo img {
     height: 20px;
   }
 
-  .hero {
-    padding-top: 100px;
-    padding: 0 20px;
-  }
-
   #Spinning-Text {
     font-size: 2.5rem;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.2;
   }
 
   .profile-container {
@@ -253,20 +346,31 @@
     font-size: 2.2rem;
   }
 
+  .about-section,
+  .contact-section,
+  .projects-section,
+  .skills-section {
+    padding: 60px 15px;
+  }
+
   .cta-buttons {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    width: 100%;
   }
 
   .cta-btn {
     width: 100%;
+    max-width: 280px;
     text-align: center;
   }
 
   .social-icons {
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .social-icons img {
@@ -295,12 +399,29 @@
     width: 100%;
   }
 
-  nav ul {
-    gap: 25px;
+  .nav-section ul li a {
+    font-size: 1.2rem;
   }
 
-  nav ul li a {
-    font-size: 1.2rem;
+  .about-me {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .about-me p {
+    font-size: 0.9rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .projects-container,
+  .skills-container {
+    padding: 0 5px;
+  }
+
+  .contact-container {
+    padding: 0 5px;
   }
 }
 
@@ -313,10 +434,12 @@
     left: 0;
     right: 0;
     position: fixed;
+    box-sizing: border-box;
   }
 
   .gradient-bg {
     width: 100% !important;
+    max-width: 100% !important;
   }
 
   .logo img {
@@ -325,14 +448,31 @@
 
   .hero {
     padding-top: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
   }
 
+  .hero-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* ADDED: Scale hamburger for smaller screens */
   .hamburger {
     scale: 0.9;
+    display: flex;
+    z-index: 999;
+    position: relative;
   }
 
   .hamburger span {
     width: 22px;
+  }
+
+  /* ADDED: Keep regular nav hidden */
+  nav ul {
+    display: none;
   }
 
   .nav-section {
@@ -342,11 +482,15 @@
     padding: 0;
   }
 
-  nav ul {
+  /* ADDED: Show mobile nav when active */
+  .nav-section ul {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 
-  nav ul li a {
+  .nav-section ul li a {
     padding: 12px;
     display: inline-block;
   }
@@ -359,6 +503,29 @@
   .form-group input,
   .form-group textarea {
     padding: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .about-me {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-me p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  #Spinning-Text {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .left-content {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -368,33 +535,53 @@
     width: 100% !important;
     left: 0;
     right: 0;
+    box-sizing: border-box;
   }
 
   .logo img {
     height: 26px;
   }
 
+  /* ADDED: Scale hamburger for very small screens */
   .hamburger {
     scale: 0.8;
+    display: flex;
+    z-index: 999;
+    position: relative;
   }
 
   .hamburger span {
     width: 20px;
   }
 
+  /* ADDED: Keep regular nav hidden */
   nav ul {
-    gap: 20px;
+    display: none;
+  }
+
+  /* ADDED: Show mobile nav when active */
+  .nav-section ul {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-section ul li a {
+    font-size: 1.1rem;
+    padding: 10px;
   }
 
   #Spinning-Text {
     font-size: 2rem;
+    line-height: 1.1;
   }
 
   .about-section,
   .contact-section,
   .projects-section,
   .skills-section {
-    padding: 60px 15px;
+    padding: 60px 12px;
   }
 
   .section-header {
@@ -415,46 +602,69 @@
     padding-top: 70px;
   }
 
-  nav ul {
-    gap: 15px;
-  }
-
-  nav ul li a {
-    font-size: 1.1rem;
-    padding: 10px;
-  }
-
   .social-icons {
     gap: 8px;
+  }
+
+  .hero {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .hero-container {
+    padding: 0;
+  }
+
+  .about-me {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-me p {
+    font-size: 0.85rem;
   }
 }
 
 @media screen and (max-width: 250px) {
   header {
     padding: 8px 10px;
+    box-sizing: border-box;
   }
 
   .logo img {
     height: 25px;
   }
 
+  /* ADDED: Scale hamburger for ultra small screens */
   .hamburger {
     scale: 0.7;
+    display: flex;
+    z-index: 999;
+    position: relative;
   }
 
   .hamburger span {
     width: 18px;
   }
 
+  /* ADDED: Keep regular nav hidden */
+  nav ul {
+    display: none;
+  }
+
   .nav-section {
     width: 100vw;
   }
 
-  nav ul {
+  /* ADDED: Show mobile nav when active */
+  .nav-section ul {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
     gap: 12px;
   }
 
-  nav ul li a {
+  .nav-section ul li a {
     font-size: 1rem;
     padding: 8px;
   }
@@ -469,5 +679,33 @@
 
   .about-me p {
     font-size: 0.9rem;
+  }
+
+  .hero {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about-me {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ADDED: Additional fixes for horizontal scrolling and hamburger visibility */
+@media (max-width: 768px) {
+  .right-content {
+    margin-right: 0 !important;
+  }
+  
+  .profile-frame {
+    transform: none;
+  }
+  
+  .h-captcha {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 20px 0;
   }
 }
